@@ -73,3 +73,26 @@ console.log(circle.area()); // NaN
 console.log(circle.diameter()); // works fine
 console.log(circle.circumference()); // works fine
 
+//5) spread operator
+var myArray = ["Dilip", "Diwas", 1, true, 35];
+
+myArray.push("end");
+myArray.unshift("start");
+
+myArray = ["start", ...myArray, "end" ]
+
+console.log(myArray);
+
+//6) bind 
+var student = {
+    name:"Dilip",
+    getName: function(){
+        return this.name;
+    }
+}
+
+var name = student.getName.bind(student);
+
+console.log(name());
+console.log(student.getName());
+
